@@ -1,85 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>mau2099 - Próximamente</title>
-    <link rel="icon" type="ico" href="logo-blanco.ico">
-    <style>
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #e2e1e0;
-        width: 100%;
-        height: 100%;
-        font-family: sans-serif;
-        color: #0e670e;
-        /* background-image: linear-gradient(120deg, #22E322 0%, #00A700 50%, #0E670E 100%); */
-      }
-      img.loading {
-        width: 100%;
-        height: 100%;
-      }
-      img.logo {
-        width: 40vw;
-        position: absolute;
-        top: 1em;
-      }
 
-      #myProgress {
-        width: 50%;
-        background-color: #e2e1e0;
-        border-radius: 0.4em;
-      }
-      .card {
-        display: inline-block;
-        margin: 1rem;
-        position: relative;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Mau2099 portfolio website." />
+  <meta name="keywords" content="Mau2099,portfolio,website,webuideveloper,globant,
+  platzi,mauricio garcia, fidel mauricio garcia calderon, cdmx, ciudad de mexico,
+  programador, developer, wordpress" />
+  <meta name="author" content="Mauricio Garcia @mau2099" />
+  <title>Mau2099 - Home</title>
+  <link rel="icon" type="ico" href="favicon.ico">
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
 
-      #myBar {
-        width: 1%;
-        height: 30px;
-        background-image: linear-gradient(
-          120deg,
-          #22e322 0%,
-          #00a700 50%,
-          #0e670e 100%
-        );
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-      }
-    </style>
-  </head>
-  <body>
-    <img class="logo" src="./assets/static/logo/logo_transparent.png" />
-    <!-- <h1>Próximamente</!--> 
-    <!-- <div id="myProgress" class="card">
-      <div id="myBar"></div>
-    </div> -->
+<body>
+  <div id="particles-js"></div>
+  <section class="container">
+    <img class="logo" src="./src/assets/images/mau2099-logo.png" />
+    <h1>Próximamente</h1>
+    <div id="myProgress">
+      <div id="myBar" class="card"></div>
+    </div>
+  </section>
 
-    <script>
-      function move() {
-        let elem = document.getElementById("myBar");
-        let width = 1;
-        let id = setInterval(frame, 30);
-        function frame() {
-          if (width >= 100) {
-            width = 0;
-          } else {
-            width++;
-            elem.style.width = width + "%";
-          }
-        }
-      }
+  <script src='./src/js/particles.js'></script>
+  <script src="./src/index.js"></script>
+</body>
 
-      move();
-    </script>
-  </body>
 </html>

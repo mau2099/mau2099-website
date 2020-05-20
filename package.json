@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kreuk2099/mau2099-website/issues"
   },
-  "homepage": "https://github.com/kreuk2099/mau2099-website#readme"
+  "homepage": "https://github.com/kreuk2099/mau2099-website#readme",
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  }
 }
