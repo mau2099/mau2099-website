@@ -56,7 +56,7 @@ body {
   width: 0%;
   height: 30px;
   border-radius: 3px;
-  background-image: repeating-linear-gradient(#132964, #000);
+  background-image: repeating-linear-gradient(#0e308d, #000);
   border-bottom: 2px solid #c2000b;
 }
 
