@@ -33,7 +33,7 @@ body {
 }
 
 .logo {
-  max-width: 400px;
+  max-width: 800px;
 }
 
 .loading {
@@ -56,8 +56,8 @@ body {
   width: 0%;
   height: 30px;
   border-radius: 3px;
-  background-image: repeating-linear-gradient(#0e308d, #000);
-  border-bottom: 2px solid #c2000b;
+  background-image: repeating-linear-gradient(#022838, #023D5E);
+  border-bottom: 2px solid #C1272D;
 }
 
 .card {
