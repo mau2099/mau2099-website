@@ -46,18 +46,13 @@ body {
   background-color: transparent;
   z-index: 1;
 }
-/* #9c3939 0%,
-    #2ca02c 50%,
-    #1a6b1a 100% */
 
-/*  #C2000B 33%,
-    #093DCF 100%  */
 #myBar {
   width: 0%;
   height: 30px;
   border-radius: 3px;
-  background-image: repeating-linear-gradient(#022838, #023D5E);
-  border-bottom: 2px solid #C1272D;
+  background-image: repeating-linear-gradient(#022838, #023d5e);
+  border-bottom: 2px solid #c1272d;
 }
 
 .card {
@@ -67,8 +62,14 @@ body {
 @media screen and (max-width: 1024px) {
 }
 @media screen and (max-width: 768px) {
+  .logo {
+    max-width: 550px;
+  }
 }
 @media screen and (max-width: 480px) {
+  .logo {
+    max-width: 350px;
+  }
 }
 @media screen and (max-width: 320px) {
   .logo {
