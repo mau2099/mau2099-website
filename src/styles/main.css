@@ -11,29 +11,38 @@ body {
   background-color: #e2e2e2;
   width: 100%;
   height: 100%;
-  font-family: Mau2099Font, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Karla', 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#particles-js {
-  /* position: absolute; */
-  width: 100%;
-  height: 100%;
-}
+/* ------------- GRID --------------------- */
 
 .container {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    'logo    photo'
+    'about   photo'
+    'social  photo';
+  overflow: auto;
 }
 
-.logo {
-  max-width: 800px;
+.area-logo {
+  grid-area: logo;
+}
+.area-photo {
+  grid-area: photo;
+}
+.area-social {
+  grid-area: social;
+}
+.area-about {
+  grid-area: about;
 }
 
 .loading {
@@ -41,6 +50,77 @@ body {
   height: 100%;
 }
 
+/* ------------- HELPERS --------------------- */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.align-left {
+  align-items: start;
+}
+
+.left-offset {
+  position: relative;
+  right: 200px;
+}
+
+.full-height {
+  height: 100%;
+}
+.margin {
+  margin: 1em;
+}
+/* ------------- LOGO ----------------------------- */
+.logo {
+  width: 260px;
+}
+
+.logo-text {
+  width: 430px;
+}
+
+/* ------------- ABOUT ----------------------------- */
+.about-content {
+  font-size: 1rem;
+  margin: 1em;
+}
+
+/* ------------- SOCIAL NETWORKS -------------------*/
+.social-item {
+  margin: 0 0.5rem;
+}
+
+.social-icon {
+  color: #023d5e;
+  font-size: 36px;
+}
+.social-icon:hover {
+  color: #c1272d;
+}
+
+.social-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #c1272d;
+}
+
+/* ------------- PHOTO ---------------------------- */
+.photo {
+  position: absolute;
+  right: 0;
+}
+/* ------------- PROGRESS BAR --------------------- */
 #myProgress {
   width: 20%;
   background-color: transparent;
@@ -59,20 +139,106 @@ body {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+/* ------------- ANIMATIONS --------------------- */
+
+/* ------------- MEDIA QUERIES --------------------- */
+
 @media screen and (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      'logo photo'
+      'about social';
+  }
+  .logo {
+    width: 220px;
+  }
+  .logo-text {
+    width: 300px;
+  }
+  .area-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-content {
+    margin: 0 1em;
+  }
+  .photo-container {
+    margin: 1em 0;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.16), 3px 3px 3px rgba(0, 0, 0, 0.23);
+  }
+
+  .photo {
+    position: initial;
+    width: 100%;
+    height: 100%;
+  }
+
+  .area-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 @media screen and (max-width: 768px) {
   .logo {
-    max-width: 550px;
+    width: 220px;
+  }
+  .logo-text {
+    width: 300px;
+  }
+
+  .photo-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .photo {
+  }
+
+  .area-social {
   }
 }
 @media screen and (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      'logo'
+      'about'
+      'photo'
+      'social';
+  }
+  .logo-text {
+    width: 230px;
+  }
   .logo {
-    max-width: 350px;
+    width: 180px;
+  }
+  .photo-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .social-icon {
+    font-size: 26px;
   }
 }
 @media screen and (max-width: 320px) {
-  .logo {
-    max-width: 280px;
+  .photo {
+    width: 320px;
+  }
+  .about-content {
+    font-size: 0.8rem;
+  }
+
+  .social-title {
+    font-size: 1em;
   }
 }
