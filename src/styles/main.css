@@ -209,15 +209,6 @@ body {
     width: 100%;
     height: 100%;
   }
-<<<<<<< HEAD
-=======
-
-  .area-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
->>>>>>> e8c09829f34e5e1f1fd7ed8717fce3cfa36c7ede
 }
 @media screen and (max-width: 768px) {
   .logo {
