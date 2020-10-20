@@ -99,7 +99,6 @@ body {
 .social-item {
   margin: 0 0.5rem;
 }
-<<<<<<< HEAD
 
 .social-icon {
   color: #023d5e;
@@ -127,28 +126,6 @@ body {
   height: 100%;
   right: 0;
   top: 0;
-=======
-
-.social-icon {
-  color: #023d5e;
-  font-size: 36px;
-}
-.social-icon:hover {
-  color: #c1272d;
-}
-
-.social-title {
-  font-weight: bold;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  color: #c1272d;
-}
-
-/* ------------- PHOTO ---------------------------- */
-.photo {
-  position: absolute;
-  right: 0;
->>>>>>> e8c09829f34e5e1f1fd7ed8717fce3cfa36c7ede
 }
 /* ------------- PROGRESS BAR --------------------- */
 #myProgress {
